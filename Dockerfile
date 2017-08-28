@@ -7,9 +7,11 @@ RUN apt-get -y update && \
 
 RUN git clone https://github.com/Myria-de/mt7610u_wifi_sta_v3002_dpo_20130916.git && \
     cd mt7610u_wifi_sta_v3002_dpo_20130916 && \
-	make && \
-	make install && \
-	mkdir -p /etc/Wireless/RT2870STA && \
-	cp RT2870STA.dat /etc/Wireless/RT2870STA/RT2870STA.dat && \
+    make && \
+    make install && \
+    mkdir -p /etc/Wireless/RT2870STA && \
+    cp RT2870STA.dat /etc/Wireless/RT2870STA/RT2870STA.dat
+    
+    
 # docker build -t wireless .
 # docker run --net=host -it wireless
