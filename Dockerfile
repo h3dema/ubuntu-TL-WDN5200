@@ -3,7 +3,7 @@ FROM docker.io/ubuntu:14.04
 RUN apt-get -y update && \
     apt-get -y upgrade && \
     apt-get install -y build-essential git && \
-    apt-get install -y wpasupplicant wireless-tools hostapd
+    apt-get install -y wpasupplicant wireless-tools hostapd rfkill
 
 RUN git clone https://github.com/Myria-de/mt7610u_wifi_sta_v3002_dpo_20130916.git && \
     cd mt7610u_wifi_sta_v3002_dpo_20130916 && \
